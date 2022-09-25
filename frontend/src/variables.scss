@@ -1,0 +1,40 @@
+:root {
+    --theme: #1a3aff;
+    --theme-dark: #1933dc;
+    --theme-light: #314cfb;
+    --theme-focus: rgba(26, 57, 255, 0.4);
+    --theme-opacity: rgba(26, 57, 255, 0.1);
+    --green: #2DAF53;
+    --green-dark: #238640;
+    --green-light: #41ce6a;
+    --green-focus: rgba(45,175,83,0.3);
+    --green-opacity: rgba(45,175,83,0.1);
+    --border: #dadce0;
+    --color: #000;
+    --grey: #777;
+    --grey-light: #999;
+    --fz: 1.6rem;
+    --fz-small: calc(var(--fz) * 0.9);
+    --font: 'Inter', sans-serif;
+    --rad: 0.6rem;
+    --bg: #fff;
+    --bg-opacity: rgba(255, 255, 255, 0.5);
+    --grey-bg: #f1f1f1;
+    --field: 4.5rem;
+    --filters: 24rem;
+    --toggler-size: 2rem;
+    --toggler-padding: 0.3rem;
+}
+
+.dark {
+    --border: #5f6368;
+    --bg: #202124;
+    --grey-bg: #313236;
+    --bg-opacity: rgba(32, 33, 36, 0.4);
+    --color: #fff;
+    --grey: #b7b7b9;
+    --grey-light: #969696;
+
+    color: var(--color);
+    color-scheme: dark;
+}

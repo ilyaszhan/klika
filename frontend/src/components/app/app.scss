@@ -1,0 +1,148 @@
+.app {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 6rem 4rem;
+    display: flex;
+    align-items: flex-start;
+
+    .loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 32;
+        background: var(--bg-opacity);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: grayscale(1);
+
+        @keyframes spinner {
+            from {
+                transform: none;
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spinner {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 100%;
+            border: 2px solid var(--theme-opacity);
+            border-top: 2px solid var(--theme);
+            animation: spinner 0.6s infinite linear;
+        }
+
+    }
+
+    .app-table {
+        width: 0;
+        flex-grow: 1;
+        margin-right: 6rem;
+
+        .table {
+            border: 1px solid var(--border);
+            border-radius: var(--rad);
+            overflow: hidden;
+            margin-bottom: 3rem;
+
+            .author {
+                width: 22rem;
+            }
+
+            .name {
+                width: 0;
+                flex-grow: 1;
+            }
+
+            .genre {
+                width: 16rem;
+            }
+
+            .year {
+                width: 12rem;
+            }
+
+            .table-header {
+                display: flex;
+                border-bottom: 1px solid var(--border);
+                background: var(--grey-bg);
+
+                & > * {
+                    cursor: pointer;
+                    padding: 1rem 1.5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    cursor: pointer;
+                    font-weight: 500;
+                    user-select: none;
+
+                    .sort-indocators {
+                        line-height: 1;
+                        font-size: 1rem;
+
+                        div {
+                            opacity: 0.2;
+
+                            &.active {
+                                opacity: 1;
+                                color: var(--color);
+                            }
+
+                        }
+
+                    }
+
+                    &:not(:last-child) {
+                        border-right: 1px solid var(--border);
+                    }
+
+                }
+
+            }
+
+            .table-body {
+
+                .table-item {
+                    display: flex;
+
+                    & > * {
+                        padding: 1rem 1.5rem;
+
+                        &:not(:last-child) {
+                            border-right: 1px solid var(--border);
+                        }
+
+                    }
+                    
+                    &:not(:last-child) {
+                        border-bottom: 1px solid var(--border);
+                    }
+
+                }
+
+                .empty {
+                    text-align: center;
+                    padding: 1.5rem;
+                    color: var(--grey);
+                    font-weight: 500;
+                }
+
+            }
+
+        }
+
+    }
+
+    .app-filters {
+        width: var(--filters);
+        position: sticky;
+        top: 6rem;
+    }
+
+}
